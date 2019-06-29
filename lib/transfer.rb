@@ -8,12 +8,11 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
+    binding.pry
   end
 
   def valid?
-    if sender.valid? && receiver.valid?
-      true
-    end
+   sender.valid? && receiver.valid?
   end
 
   def execute_transaction
